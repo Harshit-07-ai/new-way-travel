@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react";;
 export default function About() {
   return (
     <section className="py-16 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <img src="/src/assets/images/about-img.jpg" alt="About" className="rounded-xl shadow-soft" />
+        <img src='./about-img.jpg' alt="About" className="rounded-xl shadow-soft" />
       </div>
       <div>
         <h1 className="text-3xl font-bold mb-4">About Us</h1>
