@@ -4,6 +4,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 import {
   FaHotel,
   FaUtensils,
@@ -72,7 +73,11 @@ export default function Home() {
             We’re a leading travel booking platform helping you explore the world with affordable packages,
             exciting adventures, and stress-free planning.
           </p>
-          <a href="/about" className="px-6 py-3 bg-brand text-white rounded-lg shadow hover:bg-brand/80 transition">Read More</a>
+          
+          <Link to="/about" className="px-6 py-3 bg-brand text-white rounded-lg shadow hover:bg-brand/80 transition">
+  Read More
+</Link>
+
         </div>
       </section>
 
