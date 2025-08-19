@@ -29,7 +29,7 @@ export default function Home() {
           <SwiperSlide key={n}>
             <div
               className="flex h-full items-center justify-center bg-cover bg-center"
-              style={{ backgroundImage: `url(/src/assets/images/home-slide-${n}.jpg)` }}
+              style={{ backgroundImage: `url(/home-slide-${n}.jpg)` }}
             >
               <div className="bg-black/50 p-8 text-center text-white rounded-xl mx-4">
                 <h2 className="text-4xl md:text-6xl font-bold mb-4">
@@ -82,7 +82,7 @@ export default function Home() {
         <div className="grid gap-8 px-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {["Kashmir","Goa","Manali","North-East","Thailand","Kerala"].map((place, i) => (
             <div key={place} className="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-lg transition">
-              <img src={`/src/assets/images/img-${(i)+1}.jpg`} alt={place} className="w-full h-56 object-cover" />
+              <img src={`img-${(i)+1}.jpg`} alt={place} className="w-full h-56 object-cover" />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{place}</h3>
                 <p className="text-gray-600 mb-4">Discover the best sights and experiences in {place}.</p>
