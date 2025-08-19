@@ -5,14 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
-import {
-  FaHotel,
-  FaUtensils,
-  FaBus,
-  FaHiking,
-  FaGlobe,
-  FaPlane,
-} from "react-icons/fa";
+import { FaHotel, FaUtensils, FaBus, FaHiking, FaGlobe, FaPlane } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -26,7 +19,7 @@ export default function Home() {
         loop
         className="w-full h-[70vh]"
       >
-        {[1,2].map((n) => (
+        {[1, 2].map((n) => (
           <SwiperSlide key={n}>
             <div
               className="flex h-full items-center justify-center bg-cover bg-center"
@@ -37,12 +30,12 @@ export default function Home() {
                   {n === 1 ? "Explore, Discover, Travel" : "Make Your Tour Worthwhile"}
                 </h2>
                 <p className="mb-6">{n === 1 ? "Travel around the world with us" : "Amazing adventures await"}</p>
-                <a
-                  href={n === 1 ? "/packages" : "/book"}
+                <Link
+                  to={n === 1 ? "/packages" : "/book"}
                   className="inline-block px-6 py-3 bg-brand text-white font-medium rounded-lg shadow hover:bg-brand/80 transition"
                 >
                   {n === 1 ? "Discover More" : "Book Now"}
-                </a>
+                </Link>
               </div>
             </div>
           </SwiperSlide>
@@ -73,11 +66,12 @@ export default function Home() {
             We’re a leading travel booking platform helping you explore the world with affordable packages,
             exciting adventures, and stress-free planning.
           </p>
-          
-          <Link to="/about" className="px-6 py-3 bg-brand text-white rounded-lg shadow hover:bg-brand/80 transition">
-  Read More
-</Link>
-
+          <Link
+            to="/about"
+            className="px-6 py-3 bg-brand text-white rounded-lg shadow hover:bg-brand/80 transition"
+          >
+            Read More
+          </Link>
         </div>
       </section>
 
@@ -85,13 +79,18 @@ export default function Home() {
       <section className="py-16 bg-lightbg">
         <h2 className="text-center text-3xl font-semibold mb-10">Top Packages</h2>
         <div className="grid gap-8 px-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-          {["Kashmir","Goa","Manali","North-East","Thailand","Kerala"].map((place, i) => (
+          {["Kashmir", "Goa", "Manali", "North-East", "Thailand", "Kerala"].map((place, i) => (
             <div key={place} className="bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-lg transition">
-              <img src={`img-${(i)+1}.jpg`} alt={place} className="w-full h-56 object-cover" />
+              <img src={`/img-${i + 1}.jpg`} alt={place} className="w-full h-56 object-cover" />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{place}</h3>
                 <p className="text-gray-600 mb-4">Discover the best sights and experiences in {place}.</p>
-                <a href="/book" className="px-4 py-2 bg-brand text-white rounded-lg hover:bg-brand/80 transition">Book Now</a>
+                <Link
+                  to="/book"
+                  className="px-4 py-2 bg-brand text-white rounded-lg hover:bg-brand/80 transition"
+                >
+                  Book Now
+                </Link>
               </div>
             </div>
           ))}
@@ -102,7 +101,12 @@ export default function Home() {
       <section className="py-20 px-6 text-center bg-brand text-white">
         <h2 className="text-4xl font-bold mb-4">Up to 50% Off</h2>
         <p className="mb-6 text-lg">Plan your holiday now and save big!</p>
-        <a href="/book" className="px-6 py-3 bg-white text-brand font-medium rounded-lg shadow hover:bg-gray-100 transition">Book Now</a>
+        <Link
+          to="/book"
+          className="px-6 py-3 bg-white text-brand font-medium rounded-lg shadow hover:bg-gray-100 transition"
+        >
+          Book Now
+        </Link>
       </section>
     </div>
   );
