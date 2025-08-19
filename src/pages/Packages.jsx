@@ -16,7 +16,7 @@ export default function Packages() {
             {/* image wrapper: fixed height, overflow-hidden, relative */}
             <div className="relative w-full h-56 overflow-hidden bg-gray-100">
               <img
-                src={`/src/assets/images/img-${i + 1}.jpg`}
+                src{`/img-${i + 1}.jpg`}
                 alt={place}
                 /* IMPORTANT:
                    - w-full h-full keeps image exactly matching wrapper box
